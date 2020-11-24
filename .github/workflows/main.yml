@@ -38,5 +38,4 @@ jobs:
     
     - name: Deploying Website on Surge
       run: surge ./build http://expense-tracker-app-mh.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
-        echo Add other actions to build,
-        echo test, and deploy your project.
+
