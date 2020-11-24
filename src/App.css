@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.appContainer{
+  margin: auto;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 0px 10px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width:878px){
+  .appContainer{
+    width:90vw;
+    height: 100%;
+  }
+  .header{
+    width: 100% !important;
+    line-height: 0.3rem !important;
+    margin: 0px 0px 10px 0px;
   }
 }
+.header{
+  width: 80%;
+  line-height: 0.6rem;
+  margin: 0px 0px 10px 0px;
+}
+.header hr{
+  margin-top: 7px !important;
+}
+.balance{
+  width: 80% ; 
+  line-height: 0.3rem;
+}
+.total{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid rgb(255, 255, 253);
+  box-shadow: 2px 2px 4px grey;
+  padding: 10px;
+}
+hr{
+  margin: 0px;
+}
+.total .verticalLine{
+  height: 50px !important;
+  width: 1px !important;
+  background-color: grey;
+}
+.total .income, .total .expense{
+  line-height: 0.3rem;
+}
+.total .income{
+  color:  rgb(69, 143, 51);
+}
+.total .expense{
+  color: rgb(196, 49, 49);
+}
+.transactions{
+  width: 80% !important;
+}
+.transactions h2{
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.transactionList{
+  padding: 3px;
+  list-style-type: none;
+  max-height: 150px !important;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.transactionList .transaction{
+  margin: 5px 0px;
+  background-color: white;
+  padding: 5px 5px 5px 22px;
+  border-radius: 2px;
+  border: 1px solid rgb(179, 179, 179);
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.transaction h3{
+  position: absolute;
+  height: inherit;
+  left:0px;
+  font-weight: 100;
+  padding: 0px 5px;
+  background-color: rgb(189, 189, 189);
+
+}
+.transaction h3:hover{
+    background-color: rgb(194, 137, 137);
+    color: rgb(255, 17, 17);
+
+}
+.plus{
+  border-right: 5px solid  rgb(69, 143, 51) !important;
+}
+.plus:hover{
+  transition: all 0.1s ease;
+  background-color:  rgb(69, 143, 51);
+  color: white;
+  border-color: rgb(69, 143, 51);
+
+}
+.minus{
+  border-right: 5px solid rgb(196, 49, 49) !important;
+}
+.minus:hover{
+  transition: all 0.1s ease;
+  background-color: rgb(196, 49, 49);
+  color: white;
+  border-color: rgb(196, 49, 49);
+
+}
+.addTransaction{
+  width: 80%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center !important;
+  align-items: center !important;
+}
+.addTransaction h2{
+  margin-bottom: 2px;
+  margin-top: 0px;
+ align-self: flex-start;
+}
+.addTransaction hr{
+  width: 100%;
+}
+.addTransaction input{
+  /* width: 100%; */
+  padding: 7px;
+  font-size: 1rem;
+}
+.addTransaction div{
+  margin: 7px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.addTransaction button{
+  width: 100%;
+  padding: 7px;
+  font-size: 1.1rem;
+  background-color: dodgerblue;
+  outline: none;
+  border: none;
   color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 5px 0px; 
 }
-
-.App-link {
-  color: #61dafb;
+.addTransaction label{
+  font-weight: 600;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btnDisable{
+  background-color: rgb(93, 144, 194) !important;
+  color: whitesmoke !important;
 }
